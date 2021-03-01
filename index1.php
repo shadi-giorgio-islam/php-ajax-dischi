@@ -14,11 +14,29 @@ include __DIR__ . '/src/db.php';
   <title>Php Ajax Dischi</title>
 </head>
 <body>
+  <!-- inzio header -->
   <header>
     <div class="container">
       <img src="https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-brands-logo-34.png" alt="logo">
     </div>
   </header>
+  <!-- fine header -->
+  <!-- inizio main -->
+  <main>
+    <div class="container">
+      <?php
+      foreach ($dischi as $disco) {?>
+        <div class="disco">
+          <img src="<?php echo $disco['poster']; ?>" alt="disco-img">
+          <h2><?php echo $disco['title']; ?></h2>
+          <h3><?php echo $disco['author']; ?></h3>
+          <p><?php echo $disco['year']; ?></p>
+        </div>
+      <?php }
+      ?>
+    </div>
+  </main>
+  <!-- fine main -->
 <!-- javascript -->
 <script src="js/script.js" charset="utf-8"></script>
 </body>

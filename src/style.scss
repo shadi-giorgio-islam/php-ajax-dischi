@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body{
-  background-color: grey;
+  background-color: #121212;
   font-family: 'Roboto', sans-serif;
   header{
     height: 80px;
@@ -15,6 +15,42 @@ body{
       padding: 10px 0;
       img{
         height: 60px;
+      }
+    }
+  }
+  main{
+    .container{
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+      .disco{
+        width: 200px;
+        height: 270px;
+        background-color: black;
+        margin-top: 20px;
+        margin-right: 20px;
+        padding: 15px;
+        text-align: center;
+        img{
+          height: 150px;
+          width: 150px;
+        }
+        h2{
+          font-size: 20px;
+          color: white;
+        }
+        h3{
+          font-size: 16px;
+          color: grey;
+        }
+        p{
+          font-size: 14px;
+          color: white;
+        }
       }
     }
   }

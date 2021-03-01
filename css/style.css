@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: grey;
+  background-color: #121212;
   font-family: "Roboto", sans-serif;
 }
 body header {
@@ -19,4 +19,38 @@ body header .container {
 }
 body header .container img {
   height: 60px;
+}
+body main .container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+body main .container .disco {
+  width: 200px;
+  height: 270px;
+  background-color: black;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 15px;
+  text-align: center;
+}
+body main .container .disco img {
+  height: 150px;
+  width: 150px;
+}
+body main .container .disco h2 {
+  font-size: 20px;
+  color: white;
+}
+body main .container .disco h3 {
+  font-size: 16px;
+  color: grey;
+}
+body main .container .disco p {
+  font-size: 14px;
+  color: white;
 }
