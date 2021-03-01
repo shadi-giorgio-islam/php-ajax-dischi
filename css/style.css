@@ -1,1 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  background-color: grey;
+  font-family: "Roboto", sans-serif;
+}
+body header {
+  height: 80px;
+  background-color: black;
+}
+body header .container {
+  width: 80%;
+  margin: auto;
+  padding: 10px 0;
+}
+body header .container img {
+  height: 60px;
+}

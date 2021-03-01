@@ -71,5 +71,4 @@ $dischi =  [
             "year"=> "1987"
         ]
     ];
-    var_dump($dischi);
 ?>
