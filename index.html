@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <title>Php Ajax Dischi</title>
+</head>
+<body>
+  <div id="app">
+    <!-- inzio header -->
+    <header>
+      <div class="container">
+        <img src="https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-brands-logo-34.png" alt="logo">
+      </div>
+    </header>
+    <!-- fine header -->
+    <!-- inizio main -->
+    <main>
+      <div class="container">
+          <div v-for="disco in dischi" class="disco">
+            <img :src="disco.poster" alt="disco-img">
+            <h2>{{disco.title}}</h2>
+            <h3>{{disco.author}}</h3>
+            <p>{{disco.year}}</p>
+          </div>
+      </div>
+    </main>
+    <!-- fine main -->
+  </div>
+<!-- javascript -->
+<script src="src/script.js" charset="utf-8"></script>
+</body>
+</html>
