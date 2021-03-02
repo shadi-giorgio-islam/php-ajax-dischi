@@ -10,13 +10,23 @@
 var app = new Vue({
   el: '#app',
   data: {
-    dischi: []
+    dischi: [],
+    generi: [],
+    selected: ''
   },
   mounted: function mounted() {
     var _this = this;
 
     axios.get('src/server.php').then(function (response) {
       _this.dischi = response.data;
+
+      _this.dischi.forEach(function (element) {
+        if (!_this.generi.includes(element.genre)) {
+          _this.generi.push(element.genre);
+        }
+      });
+
+      console.log(_this.generi);
     });
   }
 });

@@ -17,17 +17,23 @@
     <header>
       <div class="container">
         <img src="https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-brands-logo-34.png" alt="logo">
+        <select v-model="selected">
+          <option value="all">all</option>
+          <option v-for="genere in generi" :value="genere">{{genere}}</option>
+        </select>
       </div>
     </header>
     <!-- fine header -->
     <!-- inizio main -->
     <main>
       <div class="container">
-          <div v-for="disco in dischi" class="disco">
-            <img :src="disco.poster" alt="disco-img">
-            <h2>{{disco.title}}</h2>
-            <h3>{{disco.author}}</h3>
-            <p>{{disco.year}}</p>
+          <div v-for="disco in dischi">
+            <div class="disco" v-if="selected == disco.genre || selected == 'all'">
+              <img :src="disco.poster" alt="disco-img">
+              <h2>{{disco.title}}</h2>
+              <h3>{{disco.author}}</h3>
+              <p>{{disco.year}}</p>
+            </div>
           </div>
       </div>
     </main>
